@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="board-header">
+    <button mat-raised-button color="accent" (click)="openCreateBoardModal()">
+      create board
+    </button>
+    <div class="color-priorty">
+      <span class="box red-box"></span>High &nbsp;&nbsp;&nbsp;
+      <span class="box yellow-box"></span>medium &nbsp;&nbsp;&nbsp;
+      <span class="box blue-box"></span>low &nbsp;&nbsp;&nbsp;
+    </div>
+  </div>
+
+  <div class="board-grid">
+    <ng-container *ngIf="listBoard.length > 0">
+      <ng-container *ngFor="let board of listBoard">
+        <board-item
+          [board]="board"
+          (onDelete)="deleteBoard($event)"
+          (onEdit)="editBoard($event)"
+        ></board-item>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

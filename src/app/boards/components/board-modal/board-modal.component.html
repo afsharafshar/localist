@@ -1,0 +1,39 @@
+<div class="modal-container">
+  <h1 mat-dialog-title display-1 style="text-align: center">make one</h1>
+  <div mat-dialog-content>
+    <form [formGroup]="boardform" class="board-form">
+      <mat-form-field>
+        <mat-label for="title">title</mat-label>
+        <input matInput name="title" id="title" formControlName="title" />
+        <mat-error *ngIf="boardform.hasError('required')">
+          Please enter a title
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label for="priority">priority</mat-label>
+        <mat-select name="priority" id="priority" formControlName="priority">
+          <mat-option
+            required
+            [value]="pri.key"
+            *ngFor="let pri of PrioritySelect"
+            >{{ pri.value }}</mat-option
+          >
+        </mat-select>
+        <mat-error> Please enter a priority </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label for="body">body</mat-label>
+        <textarea
+          matInput
+          name="body"
+          id="body"
+          formControlName="body"
+        ></textarea>
+      </mat-form-field>
+    </form>
+  </div>
+  <div mat-dialog-actions class="modal-action">
+    <button mat-raised-button color="warn" (click)="onNoClick()">return</button>
+    <button mat-raised-button color="primary" (click)="onSave()">save</button>
+  </div>
+</div>

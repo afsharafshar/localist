@@ -1,0 +1,40 @@
+.board-header {
+  padding: 1rem;
+  margin: 1rem auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.color-priorty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.6rem;
+}
+
+.box {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 0.2rem;
+}
+
+.red-box {
+  background-color: red;
+}
+.yellow-box {
+  background-color: yellow;
+}
+.blue-box {
+  background-color: blue;
+}
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+}

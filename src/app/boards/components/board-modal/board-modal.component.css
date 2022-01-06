@@ -1,0 +1,23 @@
+.modal-container {
+  width: 450px;
+}
+
+.board-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0.2rem 0;
+}
+
+.board-form * {
+  width: 100%;
+  margin: 0.3rem 0;
+}
+
+.modal-action {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
